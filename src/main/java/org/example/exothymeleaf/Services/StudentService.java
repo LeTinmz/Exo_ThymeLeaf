@@ -36,6 +36,16 @@ public class StudentService {
         students.put(id, contact);
     }
 
+    public Student getStudentByName(String firstName, String lastName) {
+        for (Student student : students.values()) {
+            if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName)) {
+                return student;
+            }
+        }
+
+        return null;
+    }
+
     public void updateStudent(Student contact) {
         students.put(contact.getId(), contact);
     }
