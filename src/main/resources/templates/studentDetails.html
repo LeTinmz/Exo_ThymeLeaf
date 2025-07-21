@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail d'un contact</title>
+</head>
+<body>
+<span th:replace="~{home :: navBar}"></span>
+<h1>Détail du contact</h1>
+<p>Id : <span th:text="${student.id}"></span></p>
+<p>Prénom : <span th:text="${student.firstName}"></span></p>
+<p>Nom : <span th:text="${student.lastName}"></span></p>
+<p>Email : <span th:text="${student.email}"></span></p>
+<p>Age : <span th:text="${student.age}"></span></p>
+</body>
+</html>

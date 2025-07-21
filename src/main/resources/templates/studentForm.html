@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajout d'un contact</title>
+</head>
+<body>
+<h1>Ajouter un contact</h1>
+<form th:action="@{/add}" method="post" th:object="${student}">
+  <input th:field="*{id}" hidden>
+
+  <label for="first_name">Prénom du contact</label>
+  <input type="text" id="first_name" th:field="*{firstName}" required>
+
+  <label for="last_name">Nom du contact</label>
+  <input type="text" id="last_name" th:field="*{lastName}" required>
+
+  <label for="age">Age du contact</label>
+  <input type="number" id="age" th:field="*{age}" required>
+
+  <label for="email">Email du contact</label>
+  <input type="email" id="email" th:field="*{email}" required>
+
+
+  <button>Submit</button>
+</form>
+</body>
+</html>
