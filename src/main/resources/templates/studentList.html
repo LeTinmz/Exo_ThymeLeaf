@@ -11,9 +11,15 @@
     <ul th:if="${students != null}">
         <li th:each="c : ${students}">
             <a th:href="@{/detail/{id}(id=${c.getId()})}"><span th:text="${c.getFirstName()}"></span><span th:text="${c.getLastName()}"></span></a>
+            <a th:href="@{/edit/{id}(id=${c.id})}">
+                <button type="button">Modifier</button>
+            </a>
+
+            <form th:action="@{/delete/{id}(id=${c.id})}" method="post" style="display:inline;">
+                <button type="submit">Supprimer</button>
+            </form>
         </li>
     </ul>
 </div>
-<a th:href="@{/add}">Ajouter un étudiant</a>
 </body>
 </html>

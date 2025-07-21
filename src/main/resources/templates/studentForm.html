@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Ajouter un contact</h1>
-<form th:action="@{/add}" method="post" th:object="${student}">
+<form th:action="@{${student.id != null ? '/edit' : '/add'}}" method="post" th:object="${student}">
   <input th:field="*{id}" hidden>
 
   <label for="first_name">Prénom du contact</label>
